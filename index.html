@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo 5 Super Calculadora</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #f3f4f6;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 20%;
+      background-color: #253547;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      transition: 0.3s ease;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      color: #cfd8dc;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #1b2735;
+      color: #fff;
+    }
+
+    /* Contenido principal */
+    .main-content {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: #33475b;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+      .sidebar a {
+        flex: 1;
+        text-align: center;
+      }
+      .main-content {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menú</h2>
+    <a href="index.html">Inicio</a>
+    <a href="decripcion.html">Descripción</a>
+    <a href="descargar.html">Descargar</a>
+  </div>
+
+  <div class="main-content">
+    <div class="header">Equipo 5 - Super Calculadora</div>
+    <div class="content">
+      <h2>Bienvenido</h2>
+      <p>Esta es la página principal del proyecto <b>Super Calculadora</b> del Equipo 5.</p>
+      <p>Usa el menú lateral para navegar entre las secciones.</p>
+    </div>
+  </div>
+
+</body>
+</html>
