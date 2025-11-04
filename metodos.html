@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos | Calculadora de Métodos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+
+  <!-- Fuente más elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    header .logo img {
+      border-radius: 50%;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover,
+    header nav a.active {
+      color: #ffeb3b;
+    }
+
+    main {
+      padding: 40px 10%;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      margin: 30px auto;
+      max-width: 1100px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin-top: 40px;
+      font-size: 1.8em;
+    }
+
+    .separator {
+      text-align: center;
+      font-weight: bold;
+      color: #ccc;
+      margin: 25px 0;
+      letter-spacing: 5px;
+    }
+
+    .accordion .content img {
+      display: block;
+      margin: 15px auto;
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      object-fit: contain;
+    }
+
+    .accordion p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      text-align: justify;
+      color: #444;
+      background-color: #f2f5ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 10px 0;
+      border-left: 5px solid #0d47a1;
+      transition: all 0.3s ease;
+    }
+
+    .accordion p:hover {
+      background-color: #e8efff;
+      transform: scale(1.01);
+    }
+
+    .accordion-btn {
+      width: 100%;
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      padding: 15px;
+      text-align: left;
+      font-size: 1.1em;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .accordion-btn:hover {
+      background-color: #0d47a1;
+      transform: scale(1.01);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #0d47a1;
+      color: white;
+      margin-top: 40px;
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Icono.png" alt="Logo">
+      <h1>Calculadora de Métodos</h1>
+    </div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="metodos.html" class="active">Métodos</a>
+      <a href="descarga.html">Descarga</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Lista de Métodos</h2>
+    <div class="separator">──────────────────────────────────────────</div>
+
+    <h2>Funciones Lineales</h2>
+    <div class="accordion">
+
+      <div class="item">
+        <button class="accordion-btn">1️⃣ Método de Cramer</button>
+        <div class="content">
+          <p>El método de Cramer es una técnica algebraica para resolver sistemas de ecuaciones lineales con el mismo número de ecuaciones que de incógnitas, utilizando determinantes. Este método garantiza una solución única siempre que el determinante de la matriz de coeficientes sea distinto de cero.</p>
+          <img src="Crammer.png" alt="Cramer">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">2️⃣ Eliminación de Gauss</button>
+        <div class="content">
+          <p>El método de Gauss-Jordan es una extensión del método de Gauss que transforma la matriz aumentada del sistema en su forma reducida por filas. Con esto, las soluciones pueden leerse directamente sin necesidad de sustitución regresiva. Es un procedimiento sistemático y potente, pero requiere precisión en cada paso.</p>
+          <img src="EliminacionGauss.png" alt="Gauss">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">3️⃣ Matriz Inversa de Gauss-Jordan</button>
+        <div class="content">
+          <p>Un sistema de ecuaciones lineales de la forma AX = B puede resolverse mediante la relación X = A<sup>-1</sup>B, siempre que la matriz de coeficientes A sea invertible. Este método utiliza operaciones elementales para transformar A en la identidad, obteniendo así A<sup>-1</sup>.</p>
+          <img src="InversaGauss.png" alt="Gauss-Jordan">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">4️⃣ Método de Cofactores</button>
+        <div class="content">
+          <p>El método de cofactores utiliza determinantes y adjuntos para calcular la inversa de una matriz cuadrada. Es un enfoque más teórico, pero fundamental para comprender el concepto de matrices inversas.</p>
+          <img src="InversaCofactores.png" alt="Cofactores">
+        </div>
+      </div>
+    </div>
+
+    <div class="separator">──────────────────────────────────────────</div>
+
+    <h2>Raíces de Polinomios</h2>
+    <div class="accordion">
+
+      <div class="item">
+        <button class="accordion-btn">5️⃣ Método de Bolzano o Bisección</button>
+        <div class="content">
+          <p>El método de Bolzano se basa en el teorema de los valores intermedios: si una función continua cambia de signo en un intervalo [a, b], entonces existe al menos una raíz dentro de ese intervalo. Se evalúa la función en los extremos y se divide el intervalo repetidamente hasta hallar la raíz.</p>
+          <img src="Bolzano.png" alt="Bisección">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">6️⃣ Regula-Falsi</button>
+        <div class="content">
+          <p>El método de Regula Falsi, también conocido como el método del falso punto, mejora el método de Bolzano usando una interpolación lineal entre los puntos (a, f(a)) y (b, f(b)), obteniendo una mejor aproximación de la raíz sin dividir el intervalo a la mitad.</p>
+          <img src="Falsi.png" alt="Regula-Falsi">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">7️⃣ Newton-Raphson</button>
+        <div class="content">
+          <p>El método de Newton-Raphson utiliza la derivada de la función para aproximar sus raíces de manera iterativa. Es rápido y preciso, pero requiere que la función sea diferenciable y que la estimación inicial esté cerca de la raíz real.</p>
+          <img src="Newton.png" alt="Newton-Raphson">
+        </div>
+      </div>
+
+      <div class="item">
+        <button class="accordion-btn">8️⃣ Método de la Secante</button>
+        <div class="content">
+          <p>El método de la Secante es una variante del de Newton-Raphson que evita calcular derivadas, sustituyéndolas por una aproximación numérica mediante la pendiente de la secante entre dos puntos consecutivos.</p>
+          <img src="Secante.png" alt="Secante">
+        </div>
+      </div>
+    </div>
+
+    <div class="separator">──────────────────────────────────────────</div>
+
+    <h2>Próximamente Disponible</h2>
+    <h3 style="text-align:center; color:#555;">Métodos de Derivación numérica e Integración numérica</h3>
+  </main>
+
+  <footer>
+    <p>© 2025 Calculadora de Métodos</p>
+  </footer>
+</body>
+</html>

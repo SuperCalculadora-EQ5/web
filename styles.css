@@ -1,0 +1,143 @@
+:root {
+  --color-principal: #0d47a1;
+  --color-secundario: #1976d2;
+  --color-fondo: #f5f5f5;
+  --color-texto: #333;
+  --color-footer: #0d47a1;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--color-fondo);
+  margin: 0;
+  color: var(--color-texto);
+}
+
+/* Encabezado */
+header {
+  background-color: var(--color-principal);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+}
+
+/* Secciones */
+main {
+  padding: 30px 60px;
+}
+
+h2 {
+  color: var(--color-principal);
+}
+
+/* Video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Integrantes */
+.integrantes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.integrantes li {
+  padding: 5px 0;
+}
+
+/* Accordion */
+.accordion .item {
+  background: white;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.accordion-btn {
+  background: var(--color-secundario);
+  color: white;
+  width: 100%;
+  border: none;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.accordion-btn:hover {
+  background: var(--color-principal);
+}
+
+.content {
+  display: none;
+  padding: 15px;
+}
+
+.content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Descarga */
+.descarga {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.download-btn {
+  display: inline-block;
+  background: var(--color-secundario);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background: var(--color-principal);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-footer);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+.logo {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* separación entre imagen y texto */
+    }
+
+    .logo img { 
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+    }
+
